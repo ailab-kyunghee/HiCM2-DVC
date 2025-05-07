@@ -14,22 +14,32 @@ This repository provides the implementation of **HiCM²**, a memory-efficient, h
 
 ## 📁 Directory Structure
 
+<pre>
+📁 Root
 ├── args.py
-├── dataset/ # Dataset loaders (YouCook2, VideoCaption, etc.)
-├── dvc_eval/ # Captioning evaluation (SODA, METEOR, CIDEr, etc.)
-├── model/ # HiCM2 model, backbone, and T5-related modules
-├── util/ # Utility functions (metrics, dist, t5, etc.)
-├── presave/ # Pretrained checkpoints (to be downloaded)
-├── finch-llama_hier.py # Hierarchical memory constructor (our main contribution)
-├── finch-llama_hier.sh # Shell script to run memory constructor
-├── train_ret_yc2_hier.sh # Training script for YC2 with HiCM²
-├── train_ret_vitt_hier.sh # Training script for VITT with HiCM²
-├── eval_ret_yc2_hier.sh # Evaluation script for YC2 with HiCM²
-├── eval_ret_vitt_hier.sh # Evaluation script for VITT with HiCM²
-├── hierarchical_clustering_results_yc2_70B.pkl # Hierarchical Compact Memory for YC2
-├── hierarchical_clustering_results_vitt_70B.pkl # Hierarchical Compact Memory for VITT
+├── dataset/                  # Dataset loaders (YouCook2, VideoCaption, etc.)
+├── dvc_eval/                # Captioning evaluation (SODA, METEOR, CIDEr, etc.)
+├── model/                   # HiCM² model, backbone, and T5-related modules
+├── util/                    # Utility functions (metrics, dist, t5, etc.)
+├── presave/                 # Pretrained checkpoints (to be downloaded)
+│   ├── vid2seq_htmchapters.pth
+│   ├── vid2seq_htm.pth
+│   ├── vitt/best_model.pth
+│   └── yc2/best_model.pth
+├── data/                    # YouCook2, ViTT Data (to be downloaded)
+│   ├── vitt/best_model.pth
+│   └── yc2/best_model.pth
+├── finch-llama_hier.py      # Hierarchical memory constructor (our main contribution)
+├── finch-llama_hier.sh      # Shell script to run memory constructor
+├── train_ret_yc2_hier.sh    # Training script for YC2 with HiCM²
+├── train_ret_vitt_hier.sh   # Training script for VITT with HiCM²
+├── eval_ret_yc2_hier.sh     # Evaluation script for YC2 with HiCM²
+├── eval_ret_vitt_hier.sh    # Evaluation script for VITT with HiCM²
+├── hierarchical_clustering_results_yc2_70B.pkl   # Hierarchical Memory for YC2
+├── hierarchical_clustering_results_vitt_70B.pkl  # Hierarchical Memory for VITT
 ├── requirements.txt
-├── README.md
+└── README.md
+</pre>
 
 ---
 
@@ -45,15 +55,26 @@ pip install -r requirements.txt
 
 ---
 
+## 📂 Dataset Download
+
+| Dataset | Download Link                             | Save Path     |
+|---------|--------------------------------------------|----------------|
+| YC2     | [Hugging Face](https://huggingface.co/datasets/Geppa/HiCM2/tree/main)   | `data/yc2/*`    |
+| VITT    | [Hugging Face](https://huggingface.co/datasets/Geppa/HiCM2/tree/main)` | `data/vitt/*`   |
+
+> 📌 *Please download the corresponding dataset files and place them in the above directories to match the training/evaluation scripts.*
+
+---
+
 ## 🔗 Pretrained Models
 
 Due to large file sizes, pretrained weights are provided via external download:
 
 | Model Type         | Dataset      | Download Link                                  | Save Path                               |
 |--------------------|--------------|------------------------------------------------|------------------------------------------|
-| Ours               | YC2          | [Google Drive](https://link.to/yc2_model.pth)  | `presave/yc2/best_model.pth`             |
-| Ours               | VITT         | [Google Drive](https://link.to/vitt_model.pth) | `presave/vitt/best_model.pth`            |
-| Vid2Seq Baseline   | HTM-Chapters | [Google Drive](https://link.to/chapters.pth)   | `presave/vid2seq_htmchapters.pth`        |
+| Ours               | YC2          | [Hugging Face](https://huggingface.co/Geppa/HiCM2/tree/main)  | `presave/yc2/best_model.pth`             |
+| Ours               | VITT         | [Hugging Face](https://huggingface.co/Geppa/HiCM2/tree/main) | `presave/vitt/best_model.pth`            |
+| Vid2Seq Baseline   | HTM-Chapters | [Hugging Face](https://huggingface.co/Geppa/HiCM2/tree/main)   | `presave/vid2seq_htmchapters.pth`        |
 
 
 Make sure to place downloaded `.pth` files in the correct subdirectories as shown above.

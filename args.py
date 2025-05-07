@@ -74,19 +74,19 @@ def get_args_parser():
 
     parser.add_argument(
         "--youcook_features_path",
-        default=os.path.join(DATA_DIR, name2folder["youcook"], "vid2seq/clipvitl14.pth"),
+        default=os.path.join(DATA_DIR, name2folder["youcook"], "clipvitl14.pth"),
     )
     parser.add_argument(
         "--youcook_train_json_path",
-        default=os.path.join(DATA_DIR, name2folder["youcook"], "vid2seq/train.json"),
+        default=os.path.join(DATA_DIR, name2folder["youcook"], "train.json"),
     )
     parser.add_argument(
         "--youcook_val_json_path",
-        default=os.path.join(DATA_DIR, name2folder["youcook"], "vid2seq/val.json"),
+        default=os.path.join(DATA_DIR, name2folder["youcook"], "val.json"),
     )
     parser.add_argument(
         "--youcook_subtitles_path",
-        default=os.path.join(DATA_DIR, name2folder["youcook"], "vid2seq/youcook2_asr_align_proc.pkl"),
+        default=os.path.join(DATA_DIR, name2folder["youcook"], "youcook2_asr_align_proc.pkl"),
     )
     
     parser.add_argument(
@@ -112,23 +112,23 @@ def get_args_parser():
     
     parser.add_argument(
         "--vitt_features_path",
-        default=os.path.join(DATA_DIR, name2folder["vitt"], "vid2seq/clipvitl14.pth"),
+        default=os.path.join(DATA_DIR, name2folder["vitt"], "clipvitl14.pth"),
     )
     parser.add_argument(
         "--vitt_train_json_path",
-        default=os.path.join(DATA_DIR, name2folder["vitt"], "vid2seq/train.json"),
+        default=os.path.join(DATA_DIR, name2folder["vitt"], "train.json"),
     )
     parser.add_argument(
         "--vitt_val_json_path",
-        default=os.path.join(DATA_DIR, name2folder["vitt"], "vid2seq/dev.json"),
+        default=os.path.join(DATA_DIR, name2folder["vitt"], "dev.json"),
     )
     parser.add_argument(
         "--vitt_test_json_path",
-        default=os.path.join(DATA_DIR, name2folder["vitt"], "vid2seq/test.json"),
+        default=os.path.join(DATA_DIR, name2folder["vitt"], "test.json"),
     )
     parser.add_argument(
         "--vitt_subtitles_path",
-        default=os.path.join(DATA_DIR, name2folder["vitt"], "vid2seq/subtitles_align_proc.pkl"),
+        default=os.path.join(DATA_DIR, name2folder["vitt"], "subtitles_align_proc.pkl"),
     )
 
     parser.add_argument(
