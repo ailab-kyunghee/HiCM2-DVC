@@ -27,8 +27,8 @@ This repository provides the implementation of **HiCM²**, a memory-efficient, h
 │   ├── vitt/best_model.pth
 │   └── yc2/best_model.pth
 ├── data/                    # YouCook2, ViTT Data (to be downloaded)
-│   ├── vitt/best_model.pth
-│   └── yc2/best_model.pth
+│   ├── vitt/*
+│   └── yc2/*
 ├── finch-llama_hier.py      # Hierarchical memory constructor (our main contribution)
 ├── finch-llama_hier.sh      # Shell script to run memory constructor
 ├── train_ret_yc2_hier.sh    # Training script for YC2 with HiCM²
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 | Dataset | Download Link                             | Save Path     |
 |---------|--------------------------------------------|----------------|
 | YC2     | [Hugging Face](https://huggingface.co/datasets/Geppa/HiCM2/tree/main)   | `data/yc2/*`    |
-| VITT    | [Hugging Face](https://huggingface.co/datasets/Geppa/HiCM2/tree/main)` | `data/vitt/*`   |
+| VITT    | [Hugging Face](https://huggingface.co/datasets/Geppa/HiCM2/tree/main) | `data/vitt/*`   |
 
 > 📌 *Please download the corresponding dataset files and place them in the above directories to match the training/evaluation scripts.*
 
@@ -95,6 +95,8 @@ This will generate clustering outputs like:
 - `hierarchical_clustering_results_vitt_70B.pkl`
 
 You can modify the backbone, dataset, or levels within `finch-llama_hier.py`.
+
+Note: This code is based on Hugging Face's LLaMA 3 model. You must first obtain access to LLaMA 3 from Hugging Face, and then insert your Hugging Face token into finch-llama_hier.py.
 
 ---
 

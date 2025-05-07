@@ -1,11 +1,11 @@
 import argparse
 import os
 
-DATA_DIR = "/local_datasets/video_data"
+DATA_DIR = "./data"
 
 
 PRESAVE_DIR = "./presave"
-MODEL_DIR = "./checkpoints"
+MODEL_DIR = "./presave"
 
 name2folder = {
     "youcook": "yc2",
