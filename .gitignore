@@ -1,0 +1,9 @@
+out_log/
+.vscode/
+__pycache__/
+checkpoints/
+*.pth
+MAD_EVAL_anno_named.pkl
+MAD_EVAL_anno_unnamed.json
+mad_v2_unnamed.json
+*.json
