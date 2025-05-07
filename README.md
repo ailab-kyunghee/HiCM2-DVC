@@ -3,6 +3,7 @@
 Official codebase for the AAAI 2025 paper:  
 **"HiCM²: Hierarchical Compact Memory Modeling for Dense Video Captioning"**  
 [[Paper]](https://arxiv.org/abs/2412.14585)
+
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/hicm-2-hierarchical-compact-memory-modeling/dense-video-captioning-on-youcook2)](https://paperswithcode.com/sota/dense-video-captioning-on-youcook2?p=hicm-2-hierarchical-compact-memory-modeling)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/hicm-2-hierarchical-compact-memory-modeling/dense-video-captioning-on-vitt)](https://paperswithcode.com/sota/dense-video-captioning-on-vitt?p=hicm-2-hierarchical-compact-memory-modeling)
 
